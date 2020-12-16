@@ -2,18 +2,21 @@ import React from 'react';
 import "./Product.css";
 import productImg from "../media/Home/products/1.jpg";
 
-function Product() {
+function Product({title, price, image, rating}) {
+
     return (
         <div className="product">
 
             <div className="product-info">
-                <p>OPPO A53 (Fancy Blue, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers</p>
+                <p>{title}</p>
                 <p className="product-price">
                     <small>₹</small>
-                    <strong>12,990.00 </strong>
+                    <strong>{price}</strong>
                 </p>
                 <div className="product-rating">
-                    <p>&</p><p>&</p>
+                    {Array(rating).fill().map((_, i) => (
+                        <p>⭐</p>
+                    ))}
                 </div>
             </div>
 
