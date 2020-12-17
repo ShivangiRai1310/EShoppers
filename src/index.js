@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+// import * as serviceWorker from "./serviceWorker";
+import reducer, { initialState } from "./reducer";
+import { StateProvider } from "./StateProvider";
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+  <StateProvider initialState={initialState} reducer={reducer}>
+    <App />
+  </StateProvider>,
+  document.getElementById("root")
 );
-
