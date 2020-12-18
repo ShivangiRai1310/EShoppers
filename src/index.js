@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -17,3 +18,18 @@ ReactDOM.render(
 );
 
 //serviceWorker.unregister();
+=======
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+// import * as serviceWorker from "./serviceWorker";
+import reducer, { initialState } from "./reducer";
+import { StateProvider } from "./StateProvider";
+
+ReactDOM.render(
+  <StateProvider initialState={initialState} reducer={reducer}>
+    <App />
+  </StateProvider>,
+  document.getElementById("root")
+);
+>>>>>>> a535050414421a246f622f0b55b83708d3245752
