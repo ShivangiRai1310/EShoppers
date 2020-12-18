@@ -24,7 +24,7 @@ function Checkout() {
                         <CheckoutProduct
                             id={item.id}
                             title={item.title}
-                            image="https://www.datafeedwatch.com/hs-fs/hubfs/ebooks-images/amazon-sales-ebook-cover.png?width=570&height=380&name=amazon-sales-ebook-cover.png"
+                            image={item.image}
                             price={item.price}
                             rating={item.rating}
                         />

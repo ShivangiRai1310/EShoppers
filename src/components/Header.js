@@ -8,15 +8,13 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "../firebase";
 
 function Header() {
-
-  const [{basket, user}, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   const handleAuthentication = () => {
-    if(user){
+    if (user) {
       auth.signOut();
     }
-
-  }
+  };
 
   return (
     <div className="header">
@@ -24,7 +22,6 @@ function Header() {
       <Link to="/">
         <img className="header-logo" src={logo} alt="brand-logo" />
       </Link>
-      
 
       {/* HEADER SEARCH BAR */}
       <div className="header-search">
@@ -34,29 +31,36 @@ function Header() {
 
       {/* HEADER NAVBAR */}
       <div className="header-nav">
-        <Link to={!user && '/login'}>
+
+        <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header-option">
-            <span className="line-one">Hello {!user ? "Guest" : user.email}</span>
+            <span className="line-one">
+              Hello {!user ? "Guest" : user.email}
+            </span>
             <span className="line-two">{user ? "Sign Out" : "Sign In"}</span>
           </div>
         </Link>
-        <div className="header-option">
-          <span className="line-one">Returns</span>
-          <span className="line-two">& Orders</span>
-        </div>
+
+        <Link to="/orders">
+          <div className="header-option">
+            <span className="line-one">Returns</span>
+            <span className="line-two">& Orders</span>
+          </div>
+        </Link>
+
         <div className="header-option">
           <span className="line-one">Your</span>
           <span className="line-two">Prime</span>
         </div>
 
-        <Link to="checkout">
+        <Link to="/checkout">
           <div className="header-option-basket">
-          <ShoppingCartIcon />
-          <span className="header-option-basketcount line-two"></span>
-          {basket?.length}
-        </div>
+            <ShoppingCartIcon />
+            <span className="header-option-basketcount line-two"></span>
+            {basket?.length}
+          </div>
         </Link>
-
+        
       </div>
     </div>
   );
