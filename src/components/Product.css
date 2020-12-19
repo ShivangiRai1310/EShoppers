@@ -46,6 +46,7 @@
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
     height: 20px;
+    /* display: inline-block; */
 }
 
 .product button:hover{
@@ -54,3 +55,4 @@
     box-shadow: 2px 3px 10px darkgray;
     transform: translateY(-1px);
 }
+
