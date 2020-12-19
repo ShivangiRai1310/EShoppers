@@ -38,6 +38,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
+    console.log("The SECRET is >>>>> ", clientSecret);
+
 
     const handleSubmit = async (event) => {
         // do all the fancy stripe stuff...
@@ -98,7 +100,7 @@ function Payment() {
                             <CheckoutProduct
                                 id={item.id}
                                 title={item.title}
-                                image="https://www.datafeedwatch.com/hs-fs/hubfs/ebooks-images/amazon-sales-ebook-cover.png?width=570&height=380&name=amazon-sales-ebook-cover.png"
+                                image={item.image}
                                 price={item.price}
                                 rating={item.rating}
                             />
