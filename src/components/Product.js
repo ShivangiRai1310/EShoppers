@@ -39,7 +39,7 @@ function Product({id, title, price, image, rating}) {
                 </div>
             </div>
 
-            <img src={productImg} alt="product" />
+            <img src={image} alt="product" />
 
             <button onClick={addToBasket}>Add to Basket</button>
             
@@ -47,4 +47,4 @@ function Product({id, title, price, image, rating}) {
     )
 }
 
-export default Product
+export default Product;
