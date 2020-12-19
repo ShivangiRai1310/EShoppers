@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
-import productImg from "../media/Home/products/1.jpg";
 
 function Product({id, title, price, image, rating}) {
 
