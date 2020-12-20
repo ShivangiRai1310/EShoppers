@@ -5,6 +5,7 @@ import moment from "moment";
 import CurrencyFormat from "react-currency-format";
 
 function Order({ order }) {
+
   return (
     <div className="order">
       <h2>Order</h2>
@@ -30,7 +31,7 @@ function Order({ order }) {
         value={order.data.amount / 100}
         displayType={"text"}
         thousandSeparator={true}
-        prefix={"$"}
+        prefix={"₹"}
       />
     </div>
   );

@@ -7,7 +7,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
 import axios from './axios';
-//import { db } from "./firebase";
+import { db } from "../firebase";
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
@@ -51,16 +51,16 @@ function Payment() {
         }).then(({ paymentIntent }) => {
             // paymentIntent = payment confirmation
 
-            // db
-            //   .collection('users')
-            //   .doc(user?.uid)
-            //   .collection('orders')
-            //   .doc(paymentIntent.id)
-            //   .set({
-            //       basket: basket,
-            //       amount: paymentIntent.amount,
-            //       created: paymentIntent.created
-            //   })
+            db
+              .collection('users')
+              .doc(user?.uid)
+              .collection('orders')
+              .doc(paymentIntent.id)
+              .set({
+                  basket: basket,
+                  amount: paymentIntent.amount,
+                  created: paymentIntent.created
+              })
 
             setSucceeded(true);
             setError(null)
@@ -99,8 +99,8 @@ function Payment() {
                     </div>
                     <div className='payment__address'>
                         <p>{user?.email}</p>
-                        <p>123 React Lane</p>
-                        <p>Los Angeles, CA</p>
+                        <p>UVCE, K.R. Circle</p>
+                        <p>Bangalore, Karnataka - 560001</p>
                     </div>
                 </div>
 
@@ -143,7 +143,7 @@ function Payment() {
                                         value={getBasketTotal(basket)}
                                         displayType={"text"}
                                         thousandSeparator={true}
-                                        prefix={"$"}
+                                        prefix={"₹"}
                                     />
                                     <button disabled={processing || disabled || succeeded}>
                                         <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
