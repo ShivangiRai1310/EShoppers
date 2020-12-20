@@ -38,5 +38,12 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
+    height: 20px;
 }
 
+.product button:hover{
+    background-color: #f8c648;
+    /* border-radius: 7px; */
+    box-shadow: 2px 3px 10px darkgray;
+    transform: translateY(-1px);
+}
