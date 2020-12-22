@@ -7,17 +7,18 @@ import Carousel from "react-bootstrap/Carousel";
 //import Button from 'react-bootstrap/Button';
 
 function Home() {
-  //     const [products, setProducts] = useState([]);
-  //   useEffect(() => {
-  //     db.collection("products").onSnapshot((snapshot) =>
-  //       setProducts(
-  //         snapshot.docs.map((doc) => ({
-  //           id: doc.id,
-  //           data: doc.data(),
-  //         }))
-  //       )
-  //     );
-  //   }, []);
+      const [products, setProducts] = useState([]);
+      
+    useEffect(() => {
+      db.collection("products").onSnapshot((snapshot) =>
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
+    }, []);
 
   //   console.log(products[0].data.title);
 
@@ -62,7 +63,7 @@ function Home() {
                 </Carousel.Item>
                 </Carousel>
       <div className="home-container">
-        {/* {products?.map((product) => (
+        {products?.map((product) => (
             <div className="home-row">
             <Product
               id={product.id}
@@ -72,9 +73,9 @@ function Home() {
               rating={product.data.rating}
             />
             </div>
-          ))} */}
+          ))}
 
-        <div className="home-row">
+        {/* <div className="home-row">
           <Product
             id="1"
             title="Samsung Galaxy Tab A 10.1 (10.1 inch, RAM 2GB, ROM 32GB, Wi-Fi-Only), Blacks"
@@ -169,7 +170,7 @@ function Home() {
             rating={4}
           />
         </div>
-        
+         */}
 
       </div>
     </div>

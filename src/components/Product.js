@@ -22,15 +22,15 @@ function Product({ id, title, price, image, rating, desc }) {
     });
   };
 
-  // const newTo = {
-  //   pathname: "/productDetails/${id}",
-  //   id: id,
-  //   title: title,
-  //   image: image,
-  //   price: price,
-  //   rating: rating,
-  //   desc: desc
-  // };
+  const newTo = {
+    pathname: "/productDetails/${id}",
+    id: id,
+    title: title,
+    image: image,
+    price: price,
+    rating: rating,
+    desc: desc
+  };
 
   return (
     
@@ -53,7 +53,7 @@ function Product({ id, title, price, image, rating, desc }) {
         <img src={image} alt="product" />
 
         <button onClick={addToBasket}>Add to Basket</button>
-        {/* <Link to={newTo}><button>More Details</button></Link> */}
+        <Link to={newTo}><button>More Details</button></Link>
       </div>
   );
 }
