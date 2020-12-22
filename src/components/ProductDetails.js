@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ProductDetails(props) {
-    // console.log(props);
+    console.log(props);
     const p = props.location;
     return (
         <div>

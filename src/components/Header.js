@@ -48,10 +48,10 @@ function Header() {
           </div>
         </Link>
 
-        <div className="header-option">
+        {/* <div className="header-option">
           <span className="line-one">Your</span>
           <span className="line-two">Prime</span>
-        </div>
+        </div> */}
 
         <Link to="/checkout">
           <div className="header-option-basket">
