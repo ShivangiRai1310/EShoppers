@@ -12,19 +12,17 @@ function Invoice(props) {
   const order = props.location.order;
   const [userData, setUserData] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
     if (user) {
-      db.collection("users") 
-        .doc(user?.uid) 
-        .onSnapshot( (doc) =>
-          setUserData(doc.data())
-        );
-    } else {
-      setUserData([]);
+      db.collection("users")
+        .doc(user?.uid)
+        .onSnapshot((doc) => {
+          setUserData(doc.data());
+        });
     }
-  }, []);
+  // }, []);
 
-  console.log("Current data: ", userData);
+  // console.log("Current data: ", userData.address?.area);
 
   if (!user) {
     history.replace("/");
@@ -51,7 +49,7 @@ function Invoice(props) {
                 </div>
                 <div className="invoice-content">
                   <div class="intro">
-                    Hi <strong>{userData.name}</strong>,
+                    Hi <strong>{userData?.name}</strong>,
                     <br />
                     This is the receipt for a payment of{" "}
                     <strong>₹{order.data.amount / 100}</strong> for your order
@@ -81,12 +79,13 @@ function Invoice(props) {
                         <span>Shipping Details</span>
                         <strong>{userData.name}</strong>
                         <p>
-                        {userData.address.area} <br />
-                        {userData.address.city} <br />
-                        {userData.address.state} <br />
-                        {userData.address.country} <br />
-                        {userData.address.pincode} <br />
-                          Phone : {userData.phone}<br />
+                          {userData.address?.area} <br />
+                          {userData.address?.city} <br />
+                          {userData.address?.state} <br />
+                          {userData.address?.country} <br />
+                          {userData.address?.pincode} <br />
+                          Phone : {userData.phone}
+                          <br />
                           Email : {user.email}
                           <br />
                         </p>
@@ -138,8 +137,13 @@ function Invoice(props) {
                     </div>
                     <div class="total text-right">
                       <p class="extra-notes">
-                      <p><strong>Order Status : </strong> Order placed</p>
-                      <p><strong>Payment Status : </strong> Payment completed successfully</p>
+                        <p>
+                          <strong>Order Status : </strong> Order placed
+                        </p>
+                        <p>
+                          <strong>Payment Status : </strong> Payment completed
+                          successfully
+                        </p>
                       </p>
                       <div class="field">
                         Subtotal <span>₹{order.data.amount / 100}</span>

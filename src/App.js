@@ -5,6 +5,7 @@ import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import Orders from "./components/Orders";
 import Payment from "./components/Payment";
+import Delivery from "./components/Delivery";
 import Invoice from "./components/Invoice";
 import ProductDetails from "./components/ProductDetails";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -70,6 +71,11 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+
+          <Route path="/delivery">
+            <Header />
+            <Delivery />
           </Route>
 
           <Route path="/payment">
