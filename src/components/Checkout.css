@@ -1,8 +1,9 @@
-.checkout {
+.checkout-container {
     display: flex;
     padding: 20px;
     background-color: white;
     height: max-content;
+    justify-content:space-evenly;
 }
 
 .checkout__ad{
@@ -16,4 +17,8 @@
     padding: 10px;
     border-bottom: 1px solid lightgray;
 }
+
+.checkout__right{
+    margin-top:130px;
+} 
 

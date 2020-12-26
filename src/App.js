@@ -5,6 +5,7 @@ import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import Orders from "./components/Orders";
 import Payment from "./components/Payment";
+import PaymentSuccess from "./components/PaymentSuccess";
 import Delivery from "./components/Delivery";
 import Invoice from "./components/Invoice";
 import ProductDetails from "./components/ProductDetails";
@@ -76,6 +77,10 @@ function App() {
           <Route path="/delivery">
             <Header />
             <Delivery />
+          </Route>
+
+          <Route path="/payment-successful">
+            <PaymentSuccess />
           </Route>
 
           <Route path="/payment">
