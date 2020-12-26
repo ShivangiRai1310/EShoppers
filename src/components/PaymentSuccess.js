@@ -20,7 +20,7 @@ function PaymentSuccess() {
             </span>
             <h1 class="heading">Order Confirmed</h1>
             <h2 class="green"> <b>CONGRATULATIONS!</b> Your payment is successful.</h2>
-            <p class="text"> Your order with EShoppers has been placed successfully and will arrive with 7 working days. <br />
+            <p class="text"> Your order with EShoppers has been placed successfully and will arrive within 7 working days. <br />
             Thank You For trusting us. 
             </p>
             
