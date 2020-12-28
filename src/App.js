@@ -9,6 +9,7 @@ import PaymentSuccess from "./components/PaymentSuccess";
 import Delivery from "./components/Delivery";
 import Invoice from "./components/Invoice";
 import ProductDetails from "./components/ProductDetails";
+import CategoryDetails from "./components/CategoryDetails";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./components/StateProvider";
@@ -51,6 +52,9 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+
+          <Route path="/category-details/:name" component={CategoryDetails} />
+
           <Route path="/productDetails/:id" component={ProductDetails} />
 
           <Route path="/invoice/:id" component={Invoice} />
