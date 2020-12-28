@@ -3,10 +3,10 @@ import "./Product.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 
-function Product({ id, title, price, image, rating, desc }) {
+function Product({ id, data }) {
   const [{ basket }, dispatch] = useStateValue();
 
-  //console.log("this is the basket>>>");
+  console.log("this is the basket>>>");
 
   const addToBasket = () => {
     //dispatch the item into the data layer
@@ -14,10 +14,10 @@ function Product({ id, title, price, image, rating, desc }) {
       type: "ADD_TO_BASKET",
       item: {
         id: id,
-        title: title,
-        image: image,
-        price: price,
-        rating: rating,
+        title: data.title,
+        image: data.image,
+        price: data.price,
+        rating: data.rating,
       },
     });
   };
@@ -25,24 +25,20 @@ function Product({ id, title, price, image, rating, desc }) {
   const newTo = {
     pathname: "/productDetails/${id}",
     id: id,
-    title: title,
-    image: image,
-    price: price,
-    rating: rating,
-    desc: desc
+    data: data
   };
 
   return (
     
       <div className="product">
         <div className="product-info">
-          <p>{title}</p>
+          <p>{data.title}</p>
           <p className="product-price">
             <small>₹</small>
-            <strong>{price}</strong>
+            <strong>{data.price}</strong>
           </p>
           <div className="product-rating">
-            {Array(rating)
+            {Array(data.rating)
               .fill()
               .map((_, i) => (
                 <p>⭐</p>
@@ -50,7 +46,7 @@ function Product({ id, title, price, image, rating, desc }) {
           </div>
         </div>
 
-        <img src={image} alt="product" />
+        <img src={data.image} alt="product" />
 
         <button onClick={addToBasket}>Add to Basket</button>
         <Link to={newTo}><button>More Details</button></Link>
