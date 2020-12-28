@@ -3,8 +3,14 @@ import "./Order.css";
 import CheckoutProduct from "./CheckoutProduct";
 import moment from "moment";
 import CurrencyFormat from "react-currency-format";
+import { Link } from "react-router-dom";
 
 function Order({ order }) {
+
+  const newTo = {
+    pathname: "/invoice/${order.id}",
+    order: order
+  };
 
   return (
     <div className="order">
@@ -33,6 +39,7 @@ function Order({ order }) {
         thousandSeparator={true}
         prefix={"₹"}
       />
+      <Link to={newTo}><button className="btn btn-success">See Invoice</button></Link>
     </div>
   );
 }

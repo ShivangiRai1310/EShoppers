@@ -1,0 +1,211 @@
+.invoice-header{
+    background-color:#00C9A7;
+    color:white;
+    display:flex;
+    padding:0px 10px;
+    justify-content:center;
+    align-items:center;
+    height:100px;  
+}
+
+.invoice-header h1{
+    font-weight:bold;
+    font-size: 2.5rem;
+}
+
+/* .invoice-header p{
+    position:relative;
+    position:right; 
+    margin-left:30%;
+    font-size: 1.2rem;
+} */
+
+.receipt-content .logo a:hover {
+    text-decoration: none;
+    color: #7793C4; 
+  }
+  
+  .receipt-content .invoice-wrapper {
+    background: #FFF;
+    border: 1px solid #CDD3E2;
+    box-shadow: 0px 0px 1px #CCC;
+    margin-top: 40px;
+    border-radius: 4px; 
+  }
+
+  .invoice-content{
+    padding: 40px 40px 60px;
+  }
+  
+  .receipt-content .invoice-wrapper .payment-details span {
+    color: #00C9A7;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; 
+  }
+  .receipt-content .invoice-wrapper .payment-details a {
+    display: inline-block;
+    margin-top: 5px; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .print a {
+    display: inline-block;
+    border: 1px solid #00C9A7;
+    padding: 13px 13px;
+    border-radius: 5px;
+    color: #00C9A7;
+    /* border: 1px solid  #333;
+    color: #333;  */
+    font-size: 13px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .print a:hover {
+    text-decoration: none;
+    color:white;
+    background-color:#00C9A7;
+  }
+  
+  .receipt-content {
+    background: #ECEEF4; 
+  }
+  @media (min-width: 1200px) {
+    .receipt-content .container {width: 900px; } 
+  }
+  
+  .receipt-content .logo {
+    text-align: center;
+    margin-top: 50px; 
+  }
+  
+  .receipt-content .logo a {
+    font-family: Myriad Pro, Lato, Helvetica Neue, Arial;
+    font-size: 36px;
+    letter-spacing: .1px;
+    color: #555;
+    font-weight: 300;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; 
+  }
+  
+  .receipt-content .invoice-wrapper .intro {
+    line-height: 25px;
+    color: #444; 
+  }
+  
+  .receipt-content .invoice-wrapper .payment-info {
+    margin-top: 25px;
+    padding-top: 15px; 
+  }
+  
+  .receipt-content .invoice-wrapper .payment-info span {
+    color: #00C9A7;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; 
+  }
+  
+  .receipt-content .invoice-wrapper .payment-info strong {
+    display: block;
+    color: #444;
+    margin-top: 3px; 
+  }
+  
+  @media (max-width: 767px) {
+    .receipt-content .invoice-wrapper .payment-info .text-right {
+    text-align: left;
+    margin-top: 20px; } 
+  }
+  .receipt-content .invoice-wrapper .payment-details {
+    border-top: 2px solid #EBECEE;
+    margin-top: 30px;
+    padding-top: 20px;
+    line-height: 22px; 
+  }
+  
+  
+  @media (max-width: 767px) {
+    .receipt-content .invoice-wrapper .payment-details .text-right {
+    text-align: left;
+    margin-top: 20px; } 
+  }
+  .receipt-content .invoice-wrapper .line-items {
+    margin-top: 40px; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .total {
+    margin-top: 30px; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .total .extra-notes {
+    float: left;
+    width: 40%;
+    text-align: left;
+    font-size: 15px;
+    
+    line-height: 20px; 
+  }
+  
+  @media (max-width: 767px) {
+    .receipt-content .invoice-wrapper .line-items .total .extra-notes {
+    width: 100%;
+    margin-bottom: 30px;
+    float: none; } 
+  }
+  
+  /* .receipt-content .invoice-wrapper .line-items .total .extra-notes strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #454545; 
+  } */
+  
+  .receipt-content .invoice-wrapper .line-items .total .field {
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: #555; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .total .field.grand-total {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .total .field.grand-total span {
+    color: #20A720;
+    font-size: 18px; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .total .field span {
+    display: inline-block;
+    margin-left: 20px;
+    min-width: 85px;
+    color: #84868A;
+    font-size: 15px; 
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .print {
+    margin-top: 50px;
+    text-align: center; 
+    font-weight: 500;
+  }
+  
+  .receipt-content .invoice-wrapper .line-items .print a i {
+    margin: 0 9px 0 3px;
+    font-size: 14px; 
+  }
+  
+  .receipt-content .footer {
+    margin-top: 40px;
+    margin-bottom: 110px;
+    text-align: center;
+    font-size: 12px;
+    color: #969CAD; 
+  }                    
