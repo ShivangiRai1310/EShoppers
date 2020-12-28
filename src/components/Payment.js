@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Payment.css";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
+import Progressbar from "./Progressbar";
 import { Link, useHistory } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
@@ -37,8 +38,8 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
-//   console.log('THE SECRET IS >>>', clientSecret)
-//   console.log('👱', user)
+  //   console.log('THE SECRET IS >>>', clientSecret)
+  //   console.log('👱', user)
 
   const handleSubmit = async (event) => {
     // do all the fancy stripe stuff...
@@ -72,7 +73,7 @@ function Payment() {
           type: "EMPTY_BASKET",
         });
 
-        history.replace("/orders");
+        history.replace("/payment-successful");
       });
   };
 
@@ -94,6 +95,7 @@ function Payment() {
   return (
     <div className="payment">
       <div className="payment__container">
+        <Progressbar status="3" />
         <h1>
           Checkout (<Link to="/checkout">{basket?.length} items</Link>)
         </h1>
@@ -104,9 +106,17 @@ function Payment() {
             <h3>Delivery Address</h3>
           </div>
           <div className="payment__address">
-            <p><b>{userData?.name}</b></p>
+            <p>
+              <b>{userData?.name}</b>
+            </p>
             <p>{userData?.address?.area}</p>
-            <p>{userData?.address?.city +" , "+ userData?.address?.state  +" - "+ userData?.address?.pincode}</p>
+            <p>
+              {userData?.address?.city +
+                " , " +
+                userData?.address?.state +
+                " - " +
+                userData?.address?.pincode}
+            </p>
             <p>{userData?.email}</p>
             <p>{userData?.phone}</p>
           </div>
