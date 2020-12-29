@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 //import homeImg from "../media/Home/home-image.jpg";
 import { Link } from "react-router-dom";
+import Category from "./Categories";
 import Carousel from "react-bootstrap/Carousel";
 //import Button from 'react-bootstrap/Button';
 
@@ -47,11 +48,11 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-      <div>
+      <Category />
+      {/* <div>
         <Link to="/category-details/electronics"><button>More Details about electronics</button></Link>
         <Link to="/category-details/clothing"><button>More Details about clothing</button></Link>
-      </div>
+      </div> */}
 
       
     </div>

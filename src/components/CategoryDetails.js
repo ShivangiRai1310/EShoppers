@@ -3,6 +3,7 @@ import "./CategoryDetails.css";
 import Header from "./Header";
 import Product from "./Product";
 import { db } from "../firebase";
+import Footer from './Footer';
 
 function CategoryDetails(props) {
   //console.log(props);
@@ -28,8 +29,11 @@ function CategoryDetails(props) {
   return (
     <div>
       <Header />
-      <h1>{cname}</h1>
-
+      <h2 className='h1-responsive font-weight-bold text-center my-5 text-capitalize'>{cname}</h2>
+      <p className='text-center w-responsive mx-auto mb-5'>
+        Here's everything you might need from {cname}.
+        <br /> Ask and you shall get!!
+      </p>
       <div className="home-container">
         {products?.map((product) => (
           <div className="home-row">
@@ -41,6 +45,7 @@ function CategoryDetails(props) {
         ))}
 
       </div>
+      <Footer />
     </div>
   );
 }
