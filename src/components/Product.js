@@ -36,9 +36,10 @@ function Product({ id, data }) {
             <MDBCol lg='4' md='12' className='mb-lg-0 mb-4'>
               <MDBCard wide ecommerce>
                 <MDBCardImage
-                  cascade
+                  className="product-image"
+                  // cascade
                   src={data.image}
-                  top
+                  // top
                   alt='product'
                 />
                 <MDBCardBody cascade className='text-center'>
@@ -53,11 +54,8 @@ function Product({ id, data }) {
                     <span className='float-right'>
                       {/* <MDBTooltip domElement placement='top'> */}
                         <div className="product-rating">
-                          {Array(data.rating)
-                            .fill()
-                            .map((_, i) => (
-                              <p>⭐</p>
-                            ))}
+                        {console.log(data.rating)}
+                        {Array(Math.floor(data.rating)).fill(<p>⭐</p>)}
                         </div>
                       {/* </MDBTooltip> */}
                       {/* <MDBTooltip domElement placement='top'>
