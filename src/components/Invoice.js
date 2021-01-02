@@ -9,8 +9,9 @@ import { db } from "../firebase";
 function Invoice(props) {
   const [{ basket, user }, dispatch] = useStateValue();
   const history = useHistory();
-  const order = props.location.order;
+  // const order = props.location.order;
   const [userData, setUserData] = useState([]);
+  const [order, setOrder] = useState(props.location.order);
 
   // useEffect(() => {
     if (user) {
@@ -52,7 +53,7 @@ function Invoice(props) {
                     Hi <strong>{userData?.name}</strong>,
                     <br />
                     This is the receipt for a payment of{" "}
-                    <strong>₹{order.data.amount / 100}</strong> for your order
+                    <strong>₹{order?.data.amount / 100}</strong> for your order
                     at EShoppers.
                   </div>
 
@@ -60,13 +61,13 @@ function Invoice(props) {
                     <div class="row">
                       <div class="col-sm-6">
                         <span>Order Id.</span>
-                        <strong>{order.id}</strong>
+                        <strong>{order?.id}</strong>
                       </div>
                       <div class="col-sm-6 text-right">
                         <span>Payment Date</span>
                         <strong>
                           {moment
-                            .unix(order.data.created)
+                            .unix(order?.data.created)
                             .format("MMMM Do YYYY, h:mma")}
                         </strong>
                       </div>
@@ -121,7 +122,7 @@ function Invoice(props) {
                         </thead>
 
                         <tbody>
-                          {order.data.basket?.map((item) => (
+                          {order?.data.basket?.map((item) => (
                             <tr>
                               <td class="center">1</td>
                               <td>
@@ -146,13 +147,13 @@ function Invoice(props) {
                         </p>
                       </p>
                       <div class="field">
-                        Subtotal <span>₹{order.data.amount / 100}</span>
+                        Subtotal <span>₹{order?.data.amount / 100}</span>
                       </div>
                       <div class="field">
                         Shipping <span>₹0.00</span>
                       </div>
                       <div class="field grand-total">
-                        Total <span>₹{order.data.amount / 100}</span>
+                        Total <span>₹{order?.data.amount / 100}</span>
                       </div>
                     </div>
 
