@@ -49,11 +49,6 @@ function Home() {
         </Carousel.Item>
       </Carousel>
       <Category />
-      {/* <div>
-        <Link to="/category-details/electronics"><button>More Details about electronics</button></Link>
-        <Link to="/category-details/clothing"><button>More Details about clothing</button></Link>
-      </div> */}
-
       
     </div>
   );

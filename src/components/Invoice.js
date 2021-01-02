@@ -125,7 +125,7 @@ function Invoice(props) {
                             <tr>
                               <td class="center">1</td>
                               <td>
-                                <a href="#">{item.title}</a>
+                                <a href="#">{item.title[0].length!=1 ? item.title[0]:item.title}</a>
                               </td>
                               <td class="hidden-xs">{item.title}</td>
                               {/* <td class="hidden-480"> --- </td> */}
