@@ -32,32 +32,31 @@ function Product({ id, data }) {
   return (
     
       <section className='text-center my-5'>
-          <MDBRow>
-            <MDBCol lg='4' md='12' className='mb-lg-0 mb-4'>
-              <MDBCard wide ecommerce>
-                <MDBCardImage
-                  cascade
+          {/* <MDBRow>
+            <MDBCol lg='4' md='12' className='mb-lg-0 mb-4'> */}
+              {/* <MDBCard wide ecommerce> */}
+              <MDBCard style={{ width: "25rem", marginTop: "1rem", marginRight: "3rem", height: "30rem" }}>
+                <MDBCardTitle style={{marginTop: "0.5rem", marginBottom: "0.05rem"}}>
+                  <p>{data.title[0]}</p>
+                </MDBCardTitle>
+                 <MDBCardImage
+                   style={{objectFit: "contain",maxHeight:"200px", width:"100%"}}                  
                   src={data.image}
-                  top
+                  //top
                   alt='product'
-                />
-                <MDBCardBody cascade className='text-center'>
-                  <MDBCardTitle>
-                      <p>{data.title[0]}</p>
-                  </MDBCardTitle>
+                 />
+                <MDBCardBody className='text-center'>
+
                   <MDBCardText>{data.title[1]}</MDBCardText>
-                  <MDBCardFooter className='px-1'>
-                    <span className='float-left font-weight-bold'>
+                  <MDBCardFooter>
+                  <div className="row">
+                    <span className='float-left font-weight-bold' >
                       <strong>₹{data.price}</strong>
                     </span>
                     <span className='float-right'>
                       {/* <MDBTooltip domElement placement='top'> */}
-                        <div className="product-rating">
-                          {Array(data.rating)
-                            .fill()
-                            .map((_, i) => (
-                              <p>⭐</p>
-                            ))}
+                        <div className="product-rating" style={{marginLeft:"11rem"}}>
+                          {Array(Math.floor(data.rating)).fill(<p>⭐</p>)}
                         </div>
                       {/* </MDBTooltip> */}
                       {/* <MDBTooltip domElement placement='top'>
@@ -65,19 +64,24 @@ function Product({ id, data }) {
                         <span>Add to cart</span>
                       </MDBTooltip> */}
                     </span>
-                    <span className='float-left'>
+                  </div>
+                  <div className="row">
+                      <span className='float-left'style={{marginRight:"7rem"}}>
                       <MDBBtn onClick={addToBasket} color="primary">Add to basket</MDBBtn>
                     </span>
                     <span className='float-right'>
                       <Link to={newTo}>
                         <MDBBtn color="secondary">View</MDBBtn>
                       </Link> 
-                    </span>                    
+                    </span>     
+                  </div>
+                    
+                                   
                   </MDBCardFooter>
                 </MDBCardBody>
               </MDBCard>
-            </MDBCol>
-          </MDBRow>
+            {/* </MDBCol>
+          </MDBRow> */}
         {/* <div className="product-info">
           <p>{data.title}</p>
           <p className="product-price">

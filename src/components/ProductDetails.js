@@ -4,7 +4,7 @@ import "./ProductDetails.css";
 import Header from "./Header";
 import Footer from "./Footer";
 //import {  MDBRow, MDBCol, MDBIcon } from "mdbreact";
-import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
+import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn, MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBContainer } from "mdbreact";
 import { useStateValue } from "./StateProvider";
 
 function ProductDetails(props) {
@@ -48,11 +48,59 @@ function ProductDetails(props) {
                   <MDBCol md="12" lg="6">
                     <div className="mb-4">
                       <MDBView hover rounded className="z-depth-1-half mb-4">
-                        <img
+                        {/* <img
                           className="img-fluid"
                           src={data.image[0]}
                           alt=""
-                        />
+                        /> */}
+                        <MDBContainer>
+                            <MDBCarousel
+                              activeItem={1}
+                              length={3}
+                              showControls={true}
+                              showIndicators={true}
+                              className="z-depth-1"
+                            >
+                              <MDBCarouselInner>
+                                <MDBCarouselItem itemId="1">
+                                  <MDBView>
+                                    <img
+                                      className="d-block w-100"
+                                      src={data.image[0]}
+                                      alt="First slide"
+                                    />
+                                  </MDBView>
+                                </MDBCarouselItem>
+                                <MDBCarouselItem itemId="2">
+                                  <MDBView>
+                                    <img
+                                      className="d-block w-100"
+                                      src={data.image[1]}
+                                      alt="Second slide"
+                                    />
+                                  </MDBView>
+                                </MDBCarouselItem>
+                                <MDBCarouselItem itemId="2">
+                                  <MDBView>
+                                    <img
+                                      className="d-block w-100"
+                                      src={data.image[2]}
+                                      alt="Second slide"
+                                    />
+                                  </MDBView>
+                                </MDBCarouselItem>
+                                <MDBCarouselItem itemId="3">
+                                  <MDBView>
+                                    <img
+                                      className="d-block w-100"
+                                      src={data.image[3]}
+                                      alt="Third slide"
+                                    />
+                                  </MDBView>
+                                </MDBCarouselItem>
+                              </MDBCarouselInner>
+                            </MDBCarousel>
+                          </MDBContainer>
                         <a href="#!">
                           <MDBMask overlay="white-slight" className="waves-light" />
                         </a>
@@ -65,11 +113,7 @@ function ProductDetails(props) {
                        
                         <p className="font-weight-bold dark-grey-text">
                           <div className="product-rating">
-                          {Array(data.rating)
-                            .fill()
-                            .map((_, i) => (
-                              <p>⭐</p>
-                            ))}
+                          {Array(Math.floor(data.rating)).fill(<p>⭐</p>)}
                         </div>
                         </p>
                       </div>
@@ -103,10 +147,10 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                     <h3 className="font-weight-bold dark-grey-text mb-3 p-0">
-                        <a href="#!">Description</a>
+                        <a href="#!">Features</a>
                       </h3>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol>
                           <p className="font-weight-bold dark-grey-text">
                            <i class="fas fa-arrow-right"></i>  {data.features[0]}
                           </p>
@@ -118,7 +162,7 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol >
                           <p className="font-weight-bold dark-grey-text">
                             <i class="fas fa-arrow-right"></i>  {data.features[1]}
                           </p>
@@ -130,7 +174,7 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol >
                           <p className="font-weight-bold dark-grey-text">
                             <i class="fas fa-arrow-right"></i>  {data.features[2]}
                           </p>
@@ -141,7 +185,7 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol >
                           <p className="font-weight-bold dark-grey-text">
                             <i class="fas fa-arrow-right"></i>  {data.features[3]}
                           </p>
@@ -152,7 +196,7 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol >
                           <p className="font-weight-bold dark-grey-text">
                             <i class="fas fa-arrow-right"></i>  {data.features[4]}
                           </p>
@@ -163,7 +207,7 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol >
                           <p className="font-weight-bold dark-grey-text">
                             <i class="fas fa-arrow-right"></i>  {data.features[5]}
                           </p>
@@ -175,7 +219,7 @@ function ProductDetails(props) {
                       marginBottom: "1.5rem"
                     }}>
                       <MDBRow>
-                        <MDBCol md="9">
+                        <MDBCol >
                           <p className="font-weight-bold dark-grey-text">
                             <i class="fas fa-arrow-right"></i>  {data.features[6]}
                           </p>

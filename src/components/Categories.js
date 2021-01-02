@@ -71,7 +71,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://financialtribune.com/sites/default/files/field/image/17january/11_ns_stationery_210-ed_2.jpg"
+                src="https://deomnitech.com/deo/wp-content/uploads/2017/12/office-tools-and-supplies.jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -143,7 +143,7 @@ const Categories = () => {
           </MDBCol><MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://cmsimages.tribuneindia.com/gallary_content/2020/12/2020_12$largeimg_273492537.jpg"
+                src="https://www.ermiaresorts.com/Uploads/Photos/grocery.jpg"
                 alt=""
                 className="img-fluid"
               />
