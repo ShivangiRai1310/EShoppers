@@ -100,75 +100,84 @@ function Payment() {
           Checkout (<Link to="/checkout">{basket?.length} items</Link>)
         </h1>
 
-        {/* Payment section - delivery address */}
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Delivery Address</h3>
-          </div>
-          <div className="payment__address">
-            <p>
-              <b>{userData?.name}</b>
-            </p>
-            <p>{userData?.address?.area}</p>
-            <p>
-              {userData?.address?.city +
-                " , " +
-                userData?.address?.state +
-                " - " +
-                userData?.address?.pincode}
-            </p>
-            <p>{userData?.email}</p>
-            <p>{userData?.phone}</p>
-          </div>
-        </div>
-
-        {/* Payment section - Review Items */}
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Review items and delivery</h3>
-          </div>
-          <div className="payment__items">
-            {basket.map((item) => (
-              <CheckoutProduct
-                id={item.id}
-                title={item.title}
-                image={item.image}
-                price={item.price}
-                rating={item.rating}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Payment section - Payment method */}
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Payment Method</h3>
-          </div>
-          <div className="payment__details">
-            {/* Stripe magic will go */}
-
-            <form onSubmit={handleSubmit}>
-              <CardElement onChange={handleChange} />
-
-              <div className="payment__priceContainer">
-                <CurrencyFormat
-                  renderText={(value) => <h3>Order Total: {value}</h3>}
-                  decimalScale={2}
-                  value={getBasketTotal(basket)}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"₹"}
-                />
-                <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
-                </button>
+        <div className="row">
+          <div className="left col-5">
+            {/* Payment section - delivery address */}
+            <div className="payment__section">
+              <div className="payment__title">
+                <h3>Delivery Address</h3>
               </div>
+              <div className="payment__address">
+                <p>
+                  <b>{userData?.name}</b>
+                </p>
+                <p>{userData?.address?.area}</p>
+                <p>
+                  {userData?.address?.city +
+                    " , " +
+                    userData?.address?.state +
+                    " - " +
+                    userData?.address?.pincode}
+                </p>
+                <p>{userData?.email}</p>
+                <p>{userData?.phone}</p>
+              </div>
+            </div>
 
-              {/* Errors */}
-              {error && <div>{error}</div>}
-            </form>
+            {/* Payment section - Payment method */}
+            <div className="payment__section">
+              <div className="payment__title">
+                <h3>Payment Method</h3>
+              </div>
+              <div className="payment__details">
+
+                <form onSubmit={handleSubmit}>
+                  <CardElement onChange={handleChange} />
+
+                  <div className="payment__priceContainer">
+                    <CurrencyFormat
+                      renderText={(value) => <h5>Order Total: {value}</h5>}
+                      decimalScale={2}
+                      value={getBasketTotal(basket)}
+                      displayType={"text"}
+                      thousandSeparator={true}
+                      prefix={"₹"}
+                    />
+                    <button disabled={processing || disabled || succeeded}>
+                      <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                    </button>
+                  </div>
+
+                  {error && <div>{error}</div>}
+                </form>
+              </div>
+            </div>
           </div>
+            
+
+          <div className="right col-7">
+
+            {/* Payment section - Review Items */}
+            <div className="payment__section">
+              <div className="payment__title">
+                <h3>Review items and delivery</h3>
+              </div>
+              <div className="payment__items">
+                {basket.map((item) => (
+                  <CheckoutProduct
+                    id={item.id}
+                    title={item.title}
+                    image={item.image}
+                    price={item.price}
+                    rating={item.rating}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+            
+          
         </div>
       </div>
     </div>
