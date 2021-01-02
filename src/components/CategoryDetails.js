@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./CategoryDetails.css";
+//import "./CategoryDetails.css";
 import Header from "./Header";
 import Product from "./Product";
 import { db } from "../firebase";
 import Footer from './Footer';
+import { MDBRow, MDBContainer, MDBCardGroup, MDBCol, MDBCard} from 'mdbreact';
 
 function CategoryDetails(props) {
   //console.log(props);
@@ -34,7 +35,12 @@ function CategoryDetails(props) {
         Here's everything you might need from {cname}.
         <br /> Ask and you shall get!!
       </p>
-      <div className="home-container">
+      <div
+      style={{marginRight:"0rem", marginLeft:"2rem"}}
+      >
+        <MDBCardGroup
+        style={{marginRight:"3rem", marginLeft:"5rem"}}
+         >
         {products?.map((product) => (
           <div className="home-row">
             <Product
@@ -43,8 +49,10 @@ function CategoryDetails(props) {
             />
           </div>
         ))}
+        </MDBCardGroup>
+        </div>
 
-      </div>
+      
       <Footer />
     </div>
   );

@@ -71,7 +71,11 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
+<<<<<<< HEAD
+                src="https://deomnitech.com/deo/wp-content/uploads/2017/12/office-tools-and-supplies.jpg"
+=======
                 src="https://financialtribune.com/sites/default/files/field/image/17january/11_ns_stationery_210-ed_2.jpg?__cf_chl_jschl_tk__=89b1e9d93f5227e85a095f4975fcd51db0b03c40-1609364872-0-AcPOHgsuLj6_cz5E5Hv_RX6pzqE1vXT_F9_FleqvoE3UIl6Hthn711bP_0wTis1-jcjxEPGiF4wpATYmDc4kV_n4Gx9n8Qmtm6xGzzNKiA68o_BYWtn5Fl4a0TJMoOCehxPvOSssn-SQm5gj0jyZ6r8Ln6J7yaa_aLn65UcrQVcLdMuAW4dfzn8UcbC7Vwjm8iXy1gIjMwGSYf9_r1xzGkCZ2323tZcTXxLgUSPi1S1-F56Pzwf5tevOBxL0vuw7R8hY3Y6-aV6hCUe-gtwxXFIgO1uuUVyIpbKJ_tq4y8qEIDuCxLqgc5G9PlPPtwhq5ennVOWtmzDz0Y21IY2-Ilb-Z3JpCtpqnRKnBTSLis5tNMDnnmdIpoc_ykjHqX9BI1Vq-y3pzQhvS6SX5Ol8g90"
+>>>>>>> e630e6336e80c836f7004de71d89062a6e570d48
                 alt=""
                 className="img-fluid"
               />
@@ -143,7 +147,7 @@ const Categories = () => {
           </MDBCol><MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://cmsimages.tribuneindia.com/gallary_content/2020/12/2020_12$largeimg_273492537.jpg"
+                src="https://www.ermiaresorts.com/Uploads/Photos/grocery.jpg"
                 alt=""
                 className="img-fluid"
               />
