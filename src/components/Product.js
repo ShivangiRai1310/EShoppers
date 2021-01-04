@@ -36,7 +36,7 @@ function Product({ id, data }) {
             <MDBCol lg='4' md='12' className='mb-lg-0 mb-4'> */}
               {/* <MDBCard wide ecommerce> */}
               <MDBCard style={{ width: "25rem", marginTop: "1rem", marginRight: "3rem", height: "30rem" }}>
-                <MDBCardTitle style={{marginTop: "0.5rem", marginBottom: "0.05rem"}}>
+                <MDBCardTitle style={{marginTop: "1rem", marginBottom: "0.05rem"}}>
                   <p>{data.title[0]}</p>
                 </MDBCardTitle>
                  <MDBCardImage

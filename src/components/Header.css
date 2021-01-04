@@ -6,6 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    justify-content: space-between;
 }
 
 .header-logo{
@@ -14,7 +15,7 @@
     margin: 0 30px;
 }
 
-.header-search{
+/* .header-search{
     display: flex;
     flex:1;
     align-items: center;
@@ -32,7 +33,7 @@
     padding: 5px;
     height: 22px !important;
     background-color:#cd9042;
-}
+} */
 
 .header-nav{
     display: flex;

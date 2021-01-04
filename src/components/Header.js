@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import logo from "../media/logo.png";
+// import logo from "../media/logo2.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
@@ -20,14 +20,14 @@ function Header() {
     <div className="header">
       {/* LOGO */}
       <Link to="/">
-        <img className="header-logo" src={logo} alt="brand-logo" />
+        <img className="header-logo" src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/logo2.png?alt=media&token=5d891465-2a75-4fc8-b72c-d69c0b61ff89" alt="brand-logo" />
       </Link>
 
       {/* HEADER SEARCH BAR */}
-      <div className="header-search">
+      {/* <div className="header-search">
         <input className="header-search-input" type="text" />
         <SearchIcon className="header-search-icon" />
-      </div>
+      </div> */}
 
       {/* HEADER NAVBAR */}
       <div className="header-nav">

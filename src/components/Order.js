@@ -39,7 +39,7 @@ function Order({ order }) {
         thousandSeparator={true}
         prefix={"₹"}
       />
-      <Link to={newTo}><button className="btn btn-success">See Invoice</button></Link>
+      <Link to={newTo}><button className="btn btn-success order-btn">See Invoice</button></Link>
     </div>
   );
 }
