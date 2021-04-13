@@ -20,7 +20,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-153892434.jpg"
+                src="https://media.architecturaldigest.in/wp-content/uploads/2020/05/how-to-clean-gadgets-1366x768.jpg"
                 alt="electronics category"
                 className="img-fluid"
               />
