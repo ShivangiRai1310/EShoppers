@@ -20,7 +20,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-153892434.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/Categories%2Fgadgets1.jpg?alt=media&token=4beca957-1218-491f-a12a-45f9f5c0fa43"
                 alt="electronics category"
                 className="img-fluid"
               />
@@ -44,8 +44,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://media.istockphoto.com/photos/home-appliances-set-of-household-kitchen-technics-isolated-on-white-pi
-                     cture-id940975636?k=6&m=940975636&s=612x612&w=0&h=mqGbPUDhI_nrMyHCtaLqYTdu71hdBpvaPLu5PD14LZ4="
+                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/Categories%2Fappliances.jpg?alt=media&token=060f0005-ee9d-40b6-808c-381bcae7f591"
                 alt=""
                 className="img-fluid"
               />
@@ -71,7 +70,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://deomnitech.com/deo/wp-content/uploads/2017/12/office-tools-and-supplies.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/Categories%2Fstationary.jpg?alt=media&token=c9740bfc-13d1-4aa6-8035-4bdc99c0879c"
                 alt=""
                 className="img-fluid"
               />
@@ -96,7 +95,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://cmsimages.tribuneindia.com/gallary_content/2020/12/2020_12$largeimg_273492537.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/Categories%2Ffashion.jpg?alt=media&token=7cce70be-c2dc-4e48-aaf9-8f09b1307008"
                 alt=""
                 className="img-fluid"
               />
@@ -120,7 +119,7 @@ const Categories = () => {
           <MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://cdn.shopify.com/s/files/1/0044/1208/0217/products/LORDS_3_SEATER_SOFA_PVC_WALNUTBROWN_900x.png?v=1571465777"
+                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/Categories%2Ffurniture.webp?alt=media&token=2ad60362-b5e0-4d0e-9368-4b8ec1f681e8"
                 alt=""
                 className="img-fluid"
               />
@@ -143,7 +142,7 @@ const Categories = () => {
           </MDBCol><MDBCol md="6" xl="5" className="mb-4">
             <MDBView className="overlay rounded z-depth-2" waves>
               <img
-                src="https://www.ermiaresorts.com/Uploads/Photos/grocery.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-webapplication-d2a66.appspot.com/o/Categories%2Fgrocery.jpg?alt=media&token=b1256785-74c0-418d-a58c-9bea432fb283"
                 alt=""
                 className="img-fluid"
               />

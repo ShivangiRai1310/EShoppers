@@ -12,6 +12,11 @@ function CategoryDetails(props) {
 
   const [products, setProducts] = useState([]);
 
+  // const temp = db.collection("products")
+  //     .where("category", "==", cname);
+
+  // console.log(temp);
+
   useEffect(() => {
     db.collection("products")
       .where("category", "==", cname)
@@ -25,7 +30,7 @@ function CategoryDetails(props) {
       );
   }, []);
 
-  //   console.log(products[0].data.title);
+    //   console.log(products[0].data.title);
 
   return (
     <div>

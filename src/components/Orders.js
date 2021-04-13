@@ -10,6 +10,7 @@ function Orders() {
 
   useEffect(() => {
     if (user) {
+
       db.collection("users") //look for users collection(table)
         .doc(user?.uid) //in that select a specific user with the uid same as that of logged in user
         .collection("orders") //collect that user's orders collection(table)
@@ -21,6 +22,7 @@ function Orders() {
             snapshot.docs.map((doc) => ({
               id: doc.id, //and map through it to get each order id n its corressponding data
               data: doc.data(), //and store it in orders object using setorders func (useState hook)
+              
             }))
           )
         );
@@ -29,6 +31,7 @@ function Orders() {
     }
   }, []);
 
+  //console.log(orders);
   return (
     <div className="orders">
       <h1>Your Orders</h1>
